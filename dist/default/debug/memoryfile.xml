@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/debug/spi_test.X.debug.elf">
+  <executable name="dist/default/debug/spi_test_RC522.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
@@ -11,8 +11,8 @@
     <memory name="program">
       <units>bytes</units>
       <length>131316</length>
-      <used>2397</used>
-      <free>128919</free>
+      <used>2637</used>
+      <free>128679</free>
     </memory>
   </executable>
 </project>

@@ -4,17 +4,17 @@ Tool Name:
   c:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.00 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.01 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.02 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.03 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.04 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.05 \
-  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00000a40.06 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.00 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.01 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.02 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.03 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.04 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.05 \
+  -TC:\\Users\\Joect\\AppData\\Local\\Temp\\tmp00002b8c.06 \
   -p24FJ128GA202 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16 \
   -o \
-  dist/default/debug/spi_test.X.debug.elf \
+  dist/default/debug/spi_test_RC522.debug.elf \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/.. \
   -LC:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16/bin/../support/PIC24F/gld \
   -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../lib \
@@ -52,7 +52,7 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/debug/spi_test.X.debug.map \
+  -Map=dist/default/debug/spi_test_RC522.debug.map \
   --report-mem \
   --memorysummary \
   dist/default/debug/memoryfile.xml \
@@ -87,12 +87,12 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x1a0           0x270  (624)
-.text                        0x3a0               0x42e           0x645  (1605)
-.init.delay32                0x7ce                0x1c            0x2a  (42)
-.text                        0x7ea                0x44            0x66  (102)
-.dinit                       0x82e                0x10            0x18  (24)
+.text                        0x3a0               0x4ce           0x735  (1845)
+.init.delay32                0x86e                0x1c            0x2a  (42)
+.text                        0x88a                0x44            0x66  (102)
+.dinit                       0x8ce                0x10            0x18  (24)
 
-                 Total "program" memory used (bytes):          0x95d  (2397) 1%
+                 Total "program" memory used (bytes):          0xa4d  (2637) 2%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -128,8 +128,8 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00023c                  __psv_init
-                  0x000252                  __data_init
                   0x000252                  __data_init_da
+                  0x000252                  __data_init
                   0x000304                  __CNInterrupt
                   0x000318                  __OscillatorFail
                   0x000338                  __StackError
@@ -142,59 +142,59 @@ External Symbols in Program Memory (by address):
                   0x000502                  _SPI1_Exchange8bit
                   0x000514                  _SPI1_Exchange8bitBuffer
                   0x000530                  _SPI1_StatusGet
-                  0x000538                  _UART1_Initialize
-                  0x000558                  _UART1_Read
-                  0x000576                  _UART1_Write
-                  0x00058e                  _UART1_IsRxReady
-                  0x0005a6                  _UART1_IsTxReady
-                  0x0005c8                  _UART1_IsTxDone
-                  0x0005e0                  _UART1_StatusGet
-                  0x0005e8                  _UART1_Enable
-                  0x0005f2                  _UART1_Disable
-                  0x0005fc                  _main
-                  0x0006aa                  _PIN_MANAGER_Initialize
-                  0x00073a                  _DELAY_milliseconds
-                  0x00075c                  _DELAY_microseconds
-                  0x000790                  _CLOCK_Initialize
-                  0x0007ce                  ___delay32
-                  0x0007ea                  _INTERRUPT_Initialize
-                  0x00081e                  _SYSTEM_Initialize
+                  0x000538                  _main
+                  0x000686                  _UART1_Initialize
+                  0x0006a6                  _UART1_Read
+                  0x0006c4                  _UART1_Write
+                  0x0006dc                  _UART1_IsRxReady
+                  0x0006f4                  _UART1_IsTxReady
+                  0x000716                  _UART1_IsTxDone
+                  0x00072e                  _UART1_StatusGet
+                  0x000736                  _UART1_Enable
+                  0x000740                  _UART1_Disable
+                  0x00074a                  _PIN_MANAGER_Initialize
+                  0x0007da                  _DELAY_milliseconds
+                  0x0007fc                  _DELAY_microseconds
+                  0x000830                  _CLOCK_Initialize
+                  0x00086e                  ___delay32
+                  0x00088a                  _INTERRUPT_Initialize
+                  0x0008be                  _SYSTEM_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x000790                  _CLOCK_Initialize
-                  0x00075c                  _DELAY_microseconds
-                  0x00073a                  _DELAY_milliseconds
-                  0x0007ea                  _INTERRUPT_Initialize
-                  0x0006aa                  _PIN_MANAGER_Initialize
+                  0x000830                  _CLOCK_Initialize
+                  0x0007fc                  _DELAY_microseconds
+                  0x0007da                  _DELAY_milliseconds
+                  0x00088a                  _INTERRUPT_Initialize
+                  0x00074a                  _PIN_MANAGER_Initialize
                   0x0003bc                  _SPI1_Exchange
                   0x000502                  _SPI1_Exchange8bit
                   0x000514                  _SPI1_Exchange8bitBuffer
                   0x0003f0                  _SPI1_ExchangeBuffer
                   0x0003a0                  _SPI1_Initialize
                   0x000530                  _SPI1_StatusGet
-                  0x00081e                  _SYSTEM_Initialize
-                  0x0005f2                  _UART1_Disable
-                  0x0005e8                  _UART1_Enable
-                  0x000538                  _UART1_Initialize
-                  0x00058e                  _UART1_IsRxReady
-                  0x0005c8                  _UART1_IsTxDone
-                  0x0005a6                  _UART1_IsTxReady
-                  0x000558                  _UART1_Read
-                  0x0005e0                  _UART1_StatusGet
-                  0x000576                  _UART1_Write
+                  0x0008be                  _SYSTEM_Initialize
+                  0x000740                  _UART1_Disable
+                  0x000736                  _UART1_Enable
+                  0x000686                  _UART1_Initialize
+                  0x0006dc                  _UART1_IsRxReady
+                  0x000716                  _UART1_IsTxDone
+                  0x0006f4                  _UART1_IsTxReady
+                  0x0006a6                  _UART1_Read
+                  0x00072e                  _UART1_StatusGet
+                  0x0006c4                  _UART1_Write
                   0x00035a                  __AddressError
                   0x000304                  __CNInterrupt
                   0x00039a                  __DefaultInterrupt
                   0x00037a                  __MathError
                   0x000318                  __OscillatorFail
                   0x000338                  __StackError
-                  0x0007ce                  ___delay32
+                  0x00086e                  ___delay32
                   0x000252                  __data_init
                   0x000252                  __data_init_da
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0005fc                  _main
+                  0x000538                  _main
 
 Memory Configuration
 
@@ -329,17 +329,17 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x340b
+.debug_info       0x000000       0x359f
  *(.debug_info)
- .debug_info      0x000000        0x2d0 build/default/debug/mcc_generated_files/clock.o
- .debug_info      0x0002d0        0x334 build/default/debug/mcc_generated_files/system.o
- .debug_info      0x000604        0x7a2 build/default/debug/mcc_generated_files/uart1.o
- .debug_info      0x000da6        0x5ce build/default/debug/mcc_generated_files/interrupt_manager.o
- .debug_info      0x001374        0xe63 build/default/debug/mcc_generated_files/pin_manager.o
- .debug_info      0x0021d7        0x387 build/default/debug/mcc_generated_files/traps.o
- .debug_info      0x00255e        0x1c0 build/default/debug/mcc_generated_files/delay.o
- .debug_info      0x00271e        0x86c build/default/debug/mcc_generated_files/spi1.o
- .debug_info      0x002f8a        0x481 build/default/debug/main.o
+ .debug_info      0x000000        0x2df build/default/debug/mcc_generated_files/clock.o
+ .debug_info      0x0002df        0x343 build/default/debug/mcc_generated_files/system.o
+ .debug_info      0x000622        0x7b1 build/default/debug/mcc_generated_files/uart1.o
+ .debug_info      0x000dd3        0x5dd build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0013b0        0xe72 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x002222        0x396 build/default/debug/mcc_generated_files/traps.o
+ .debug_info      0x0025b8        0x1cf build/default/debug/mcc_generated_files/delay.o
+ .debug_info      0x002787        0x87b build/default/debug/mcc_generated_files/spi1.o
+ .debug_info      0x003002        0x59d build/default/debug/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x715
@@ -355,7 +355,7 @@ __CONFIG1
  .debug_abbrev    0x00051f        0x147 build/default/debug/mcc_generated_files/spi1.o
  .debug_abbrev    0x000666         0xaf build/default/debug/main.o
 
-.debug_line       0x000000        0xa9e
+.debug_line       0x000000        0xab6
  *(.debug_line)
  .debug_line      0x000000        0x127 build/default/debug/mcc_generated_files/clock.o
  .debug_line      0x000127        0x120 build/default/debug/mcc_generated_files/system.o
@@ -366,7 +366,7 @@ __CONFIG1
  .debug_line      0x000619        0x14c build/default/debug/mcc_generated_files/traps.o
  .debug_line      0x000765         0xa6 build/default/debug/mcc_generated_files/delay.o
  .debug_line      0x00080b        0x16c build/default/debug/mcc_generated_files/spi1.o
- .debug_line      0x000977        0x127 build/default/debug/main.o
+ .debug_line      0x000977        0x13f build/default/debug/main.o
 
 .debug_frame      0x000000        0x440
  *(.debug_frame)
@@ -1705,7 +1705,7 @@ LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a
 END GROUP
-OUTPUT(dist/default/debug/spi_test.X.debug.elf elf32-pic30)
+OUTPUT(dist/default/debug/spi_test_RC522.debug.elf elf32-pic30)
 LOAD default_isr
 LOAD data_init
 
@@ -1805,7 +1805,7 @@ __c30_signature
  .ivt._MathError
                   0x00000c          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.text             0x0003a0        0x42e
+.text             0x0003a0        0x4ce
  .text            0x0003a0        0x198 build/default/debug/mcc_generated_files/spi1.o
                   0x0003a0                  _SPI1_Initialize
                   0x0003bc                  _SPI1_Exchange
@@ -1813,37 +1813,37 @@ __c30_signature
                   0x000502                  _SPI1_Exchange8bit
                   0x000514                  _SPI1_Exchange8bitBuffer
                   0x000530                  _SPI1_StatusGet
- .text            0x000538         0xc4 build/default/debug/mcc_generated_files/uart1.o
-                  0x000538                  _UART1_Initialize
-                  0x000558                  _UART1_Read
-                  0x000576                  _UART1_Write
-                  0x00058e                  _UART1_IsRxReady
-                  0x0005a6                  _UART1_IsTxReady
-                  0x0005c8                  _UART1_IsTxDone
-                  0x0005e0                  _UART1_StatusGet
-                  0x0005e8                  _UART1_Enable
-                  0x0005f2                  _UART1_Disable
- .text            0x0005fc         0xae build/default/debug/main.o
-                  0x0005fc                  _main
- .text            0x0006aa         0x90 build/default/debug/mcc_generated_files/pin_manager.o
-                  0x0006aa                  _PIN_MANAGER_Initialize
- .text            0x00073a         0x56 build/default/debug/mcc_generated_files/delay.o
-                  0x00073a                  _DELAY_milliseconds
-                  0x00075c                  _DELAY_microseconds
- .text            0x000790         0x3e build/default/debug/mcc_generated_files/clock.o
-                  0x000790                  _CLOCK_Initialize
+ .text            0x000538        0x14e build/default/debug/main.o
+                  0x000538                  _main
+ .text            0x000686         0xc4 build/default/debug/mcc_generated_files/uart1.o
+                  0x000686                  _UART1_Initialize
+                  0x0006a6                  _UART1_Read
+                  0x0006c4                  _UART1_Write
+                  0x0006dc                  _UART1_IsRxReady
+                  0x0006f4                  _UART1_IsTxReady
+                  0x000716                  _UART1_IsTxDone
+                  0x00072e                  _UART1_StatusGet
+                  0x000736                  _UART1_Enable
+                  0x000740                  _UART1_Disable
+ .text            0x00074a         0x90 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x00074a                  _PIN_MANAGER_Initialize
+ .text            0x0007da         0x56 build/default/debug/mcc_generated_files/delay.o
+                  0x0007da                  _DELAY_milliseconds
+                  0x0007fc                  _DELAY_microseconds
+ .text            0x000830         0x3e build/default/debug/mcc_generated_files/clock.o
+                  0x000830                  _CLOCK_Initialize
 
-.init.delay32     0x0007ce         0x1c
- .init.delay32    0x0007ce         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
-                  0x0007ce                  ___delay32
+.init.delay32     0x00086e         0x1c
+ .init.delay32    0x00086e         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
+                  0x00086e                  ___delay32
 
-.text             0x0007ea         0x44
- .text            0x0007ea         0x1a build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x0007ea                  _INTERRUPT_Initialize
- .text            0x000804         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x000804                  _TRAPS_halt_on_error
- .text            0x00081e         0x10 build/default/debug/mcc_generated_files/system.o
-                  0x00081e                  _SYSTEM_Initialize
+.text             0x00088a         0x44
+ .text            0x00088a         0x1a build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00088a                  _INTERRUPT_Initialize
+ .text            0x0008a4         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x0008a4                  _TRAPS_halt_on_error
+ .text            0x0008be         0x10 build/default/debug/mcc_generated_files/system.o
+                  0x0008be                  _SYSTEM_Initialize
 
-.dinit            0x00082e         0x10
- .dinit           0x00082e         0x10 data_init
+.dinit            0x0008ce         0x10
+ .dinit           0x0008ce         0x10 data_init

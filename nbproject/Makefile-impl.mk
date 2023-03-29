@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=spi_test.X
+PROJECTNAME=spi_test_RC522
 
 # Active Configuration
 DEFAULTCONF=default
